@@ -10,7 +10,7 @@ Installation
 ----
 Navigate to the `aur-install` directory in the terminal (or open the terminal in that directory from your file manager) and type:
 
- > sudo chmod u+x ./install-a-i.sh
+ > sudo chmod u+x ./install-a-i.sh  
  > sudo ./install-a-i.sh
  
 The installer script places the `aur-install` script in to your `/usr/bin` folder and makes it readable/writeable by all users, so it can be invoked from any directory.
