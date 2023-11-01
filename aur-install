@@ -1,0 +1,28 @@
+START_DIR="$(pwd)"
+
+if [ "$1" = "" ]; then
+    echo "Please provide an AUR package name to install!"
+    echo "Syntax :: aur-install <package_name>"
+    exit 1
+fi
+
+if [ -f /usr/bin/git ]; then
+    echo "Dependencies OK"
+else
+    echo "'git' was not found on the system...invoking pacman"
+    sudo pacman -Sy git
+fi
+
+cd /var/tmp
+
+git clone https://aur.archlinux.org/$1.git
+if [ -f ./$1/PKGBUILD ]; then
+    cd ./$1
+    makepkg -si
+else
+    echo "'$1' wasn't found in the AUR...exiting!"
+fi
+
+cd ..
+sudo rm -r ./$1
+cd $START_DIR
