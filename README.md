@@ -3,7 +3,7 @@ Welcome to aur-install
 A simple, one-command AUR package installer for arch linux. Simply type
  > aur-install <package_name>
  
- just the way you do with `pacman` and you're done! The script handles dependecy checks, so just follow the on-screen prompts the way you'd do with pacman.
+ just the way you do with `pacman` and you're done! The script handles dependecy checks (weeeeell...kind of), so just follow the on-screen prompts the way you'd do with pacman.
 <br/>
 
 Installation
